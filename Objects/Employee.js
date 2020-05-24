@@ -12,6 +12,7 @@ var connection = mysql.createConnection({ //creating connection to server
 
 function Employee(first, last, role, manager_id) {
         connection.query("INSERT INTO employee(`first_name`, `last_name`, `role_id`, `manager_id`) VALUES (" + `${first}, ${last}, ${role}, ${manager_id})`,function(err, res){
+          if(err) throw (err)
             console.log(res)
         })
 }

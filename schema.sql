@@ -12,14 +12,15 @@ USE employee_DB;
  );
  
  CREATE TABLE role(
-	`id` INT NOT NULL,
+	`id`  INT NOT NULL AUTO_INCREMENT,
     `title` VARCHAR(30),
     `salary` DECIMAL (30),
-    `department_id` INT
+    `department_id` INT,
+    PRIMARY KEY(`id`)
  );
  
  CREATE TABLE department(
-	`id` INT NOT NULL,
-    `name` VARCHAR(30)
+	`id`  INT NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(30),
+    PRIMARY KEY(`id`)
  );
- 
